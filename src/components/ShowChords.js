@@ -1,37 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Postit from "../UI/Postit";
-import styles from './ShowChords.module.css'
-const ShowChords = () => {
-  const [item, setItem] = useState("");
+import styles from "./ShowChords.module.css";
+import { ScaleContext } from "../context/ScalesContext";
 
-  const chordsList = [
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "A",
-    "B",
-    "C#m",
-    "F#m",
-    "G#m",
-    "Cm",
-    "Dm",
-    "Em",
-    "Fm",
-    "Gm",
-    "Am",
-    "Bm",
-  ];
+const ShowChords = (props) => {
 
-  const choseChord = () => {
-    setItem(chordsList[Math.floor(Math.random() * chordsList.length)]);
+  const { scale } = useContext(ScaleContext);
+  const [randomChord, setRandomChord] = useState("");
+
+  const handleChord = () => {
+    let chord = scale[Math.floor(Math.random() * scale.length)]
+    setRandomChord(chord);
   };
-
   return (
     <>
-      {item === '' && <h1 className={styles.title}>Clique para começar!</h1>}
-      <Postit onClick={choseChord} content={item} />
+      
+      {randomChord === "" && <h1 className={styles.title}>Clique para começar!</h1>}
+      <Postit onClick={handleChord} content={randomChord}/>
     </>
   );
 };

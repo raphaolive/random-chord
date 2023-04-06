@@ -1,9 +1,41 @@
 .title{
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%);
+    margin: auto;
+    margin-top: 40px;
     text-align: center;
-    font-size: 25px;
+    font-size: 4.0rem;
     color: rgba(0, 0, 0, 0.226);
+}
+
+@media (max-width: 650px) {
+    .title{
+        margin-top: 70px;
+        
+    }
+}
+
+@media (max-width: 550px) {
+    .title{
+        margin-top: 100px;
+        
+    }
+}
+
+@media (max-width: 450px) {
+    .title{
+        margin-top: 150px;
+        
+    }
+}
+
+@media (max-width: 350px) {
+    .title{
+        margin-top: 180px;
+       
+    }
+}
+
+@media (max-width: 250px) {
+    .title{
+        font-size: 3.0rem;
+    }
 }

@@ -3,9 +3,10 @@
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50%);
-    height: 340px;
-    width: 340px;
+    height: 600px;
+    width: 600px;
     text-align: center;
+    /* background-color: rgb(167, 191, 243); */
     background: linear-gradient(192deg,rgb(195, 225, 241), rgb(167, 191, 243));
     border-radius: 3px;
     border: none;
@@ -14,7 +15,43 @@
 }
 
 .text{
-    font-size: 50px;
+    font-size: 9rem;
     margin: 0;
     color: rgba(0, 0, 0, 0.748);
+}
+
+
+@media (max-width: 650px) {
+    .postit{
+        height: 500px;
+        width: 500px;
+    }
+}
+
+@media (max-width: 550px) {
+    .postit{
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .postit{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (max-width: 350px) {
+    .postit{
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media (max-width: 250px) {
+    .postit{
+        height: 150px;
+        width: 150px;
+    }
 }
